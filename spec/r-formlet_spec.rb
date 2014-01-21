@@ -76,6 +76,21 @@ describe "RFormlet" do
     Formlets.render(TextAreaForm).should == result
   end
 
+  it "supports submit" do
+    class SubmitForm
+      include Formlets
+      def action ; "/person" ; end
+      def form_attributes
+        {
+          :create => :submit
+        }
+      end
+    end
+
+    result = "<form method='post' action='/person'><div class='form-create'><input type='submit' value='create'/></div></form>"
+    Formlets.render(SubmitForm).should == result
+  end
+
 
 
   describe "Later" do
@@ -103,7 +118,6 @@ describe "RFormlet" do
       it "supports range "
       it "supports reset"
       it "supports search"
-      it "supports submit"
       it "supports tel"
       it "supports text"
       it "supports time "

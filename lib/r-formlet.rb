@@ -23,12 +23,18 @@ module Formlets
   end
 
   def render_label(a)
+    return if a[1] == :submit
     "<label>#{a[0].capitalize}:</label><br/>"
   end
 
   #
   # Supported HTML Tags:
   #
+  #
+  
+  def submit(a)
+    "<input type='submit' value='#{a[0]}'/>"
+  end
 
   def text(a)
     input(a)
