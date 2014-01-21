@@ -6,7 +6,7 @@ A wicked way to create web forms.
 
 Example: 
 
-```
+```ruby
 ### form_form.rb
 
   class PersonForm
@@ -31,7 +31,7 @@ Formlets.render(PersonForm)
 
 Will render: 
 
-```
+```ruby
   <form action='/one_action'>
     <div class='form-name'>
       <input type='text' id='name'></input>
@@ -43,7 +43,7 @@ Will render:
 
 We currently support the following form attributes:
 
-```
+```ruby
     def form_attributes
       {
         :name => :text,
