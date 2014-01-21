@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "r-formlet"
   gem.homepage = "http://github.com/ivanacostarubio/r-formlet"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Formlets in Ruby}
+  gem.description = %Q{Formlets in Ruby}
   gem.email = "ivan@softwarecriollo.com"
   gem.authors = ["ivanacostarubio"]
   # dependencies defined in Gemfile
