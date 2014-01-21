@@ -52,27 +52,27 @@ describe "RFormlet" do
       def action ; "/person" ; end
     end
 
-    result = "<form action='/person'></form>"
+    result = "<form method='post' action='/person'></form>"
     Formlets.render(PersonForm).should == result
   end
 
   it "renders another basic form" do
-    result = "<form action='/board'></form>"
+    result = "<form method='post' action='/board'></form>"
     Formlets.render(BoardForm).should == result
   end
 
   it "renders with one attribute text" do
-    result = "<form action='/one_action'><div class='form-name'><input type='text' id='name'></input></div></form>"
+    result = "<form method='post' action='/one_action'><div class='form-name'><label>Name:</label><br/><input type='text' id='name'></input></div></form>"
     Formlets.render(OneAttributeForm).should == result
   end
 
   it "supports file uploads" do
-    result = "<form action='/file'><div class='form-logo'><input type='file' id='logo'></input></div></form>"
+    result = "<form method='post' action='/file'><div class='form-logo'><label>Logo:</label><br/><input type='file' id='logo'></input></div></form>"
     Formlets.render(FileForm).should == result
   end
 
   it "supports large text AKA text areas" do
-    result = "<form action='/file'><div class='form-features'><textarea rows='10' cols='20' id='features'></textarea></div></form>"
+    result = "<form method='post' action='/file'><div class='form-features'><label>Features:</label><br/><textarea rows='10' cols='20' id='features'></textarea></div></form>"
     Formlets.render(TextAreaForm).should == result
   end
 

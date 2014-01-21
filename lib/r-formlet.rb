@@ -15,11 +15,15 @@ module Formlets
   end
 
   def render_parent_div(a)
-    "<div class='form-#{a[0]}'>#{render_input(a)}</div>"
+    "<div class='form-#{a[0]}'>#{render_label(a)}#{render_input(a)}</div>"
   end
 
   def render_input(a)
     send(a[1], a)
+  end
+
+  def render_label(a)
+    "<label>#{a[0].capitalize}:</label><br/>"
   end
 
   #
